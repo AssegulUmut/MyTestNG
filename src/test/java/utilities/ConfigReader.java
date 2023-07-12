@@ -9,6 +9,7 @@ public class ConfigReader {
     static Properties properties;
 
     static {
+       //sorun yok
 
         String dosyaYolu= "configuration.properties";
         try {

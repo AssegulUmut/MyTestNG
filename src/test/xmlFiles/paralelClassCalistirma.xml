@@ -2,6 +2,30 @@
 
 <suite name="Istenen Classlari paralel calistirma" parallel="classes" thread-count="2">
 
+    <!--
+    paralel calistirmak icin xml dosyamizda cok kucuk iki ekleme yapmamız yeterlidir
+    1- paralel="classes" /test/ methods
+    bolusumun hangi seviyede yapilacagini belirler
+    testler calisirken cakismalar olmaması,
+    gorev bolusumunun mumkun oldugunca esit olmasi, bagimli testlerin ayni browser
+    tarafindan calistirilabilmesi
+    icin tum classlari/package'lari manuel olaraka testlere ayirip test bazinda bolusum
+    yapmak en uygunun olacaktir
+
+    2-thread-count="2"
+    ayni anda calisacak browser sayisini belirler
+    yaptigimiz bu configuration'da browser'in ne oldugunu configuration.properties
+    dosyasindan geldigi icin paralel calisan tum browser'lar aynidir
+    farkli browser'larda paralel calistirma icin(cross browser test)
+    ozel bir configuration yapmak gereklidir
+
+    verbose:"3": tum xml dosyalarinda kullanılabilir calistirma sonrasinda konsolda yazdirilan
+    detay seviyesini belirler
+    1:minumum
+    10:maximum
+
+    -->
+
     <test name="class calistirma">
 
         <classes>
